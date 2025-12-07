@@ -29,9 +29,9 @@ test.describe('login', () => {
         // Validar el menú de perfil y cerrar sesión
         const profileButton = page.locator('.menu-item img[alt="Profile"]');
         await profileButton.click();
-        const profileName = header.locator('p', { hasText: 'IRodriguez' });//nombre
+        const profileName = header.locator('p', { hasText: 'QA' });//nombre
         await expect(profileName).toBeVisible();
-        const editBtn = header.locator('button:has-text("Editar mi perfil")');//Editar mi perfil
+        const editBtn = header.locator('button:has-text("Editar perfil")');//Editar mi perfil
         await expect(editBtn).toBeVisible();
         const logoutBtn = header.locator('button:has-text("Cerrar Sesión")');//cerrar section
         await expect(logoutBtn).toBeVisible();
